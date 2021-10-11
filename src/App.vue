@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2021-10-11 17:08:38
  * @LastEditors: DongBingnan
- * @LastEditTime: 2021-10-11 20:02:56
+ * @LastEditTime: 2021-10-11 21:08:10
  * @Description: file content
  * @FilePath: \vue 项目\vue_app_test_20211011\src\App.vue
 -->
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     handler() {
-      console.log("111");
+      console.log("11111");
     },
   },
 };
