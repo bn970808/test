@@ -1,28 +1,41 @@
+<!--
+ * @Author: DongBingnan
+ * @Date: 2021-10-11 17:08:38
+ * @LastEditors: DongBingnan
+ * @LastEditTime: 2021-10-11 20:02:56
+ * @Description: file content
+ * @FilePath: \vue 项目\vue_app_test_20211011\src\App.vue
+-->
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div class="box" v-swiperight="handler"></div>
+    <van-button type="primary">主要按钮</van-button>
+    <van-button type="info">信息按钮</van-button>
+    <van-button type="default">默认按钮</van-button>
+    <van-button type="warning">警告按钮</van-button>
+    <van-button type="danger">危险按钮</van-button>
+    <p>
+      {{ time | dateFilter("-") }}
+    </p>
   </div>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass" scoped>
+.box
+  width: 100px
+  height: 100px
+  background: red
 </style>
+<script>
+export default {
+  data() {
+    return {
+      time: Date.now(),
+    };
+  },
+  methods: {
+    handler() {
+      console.log("111");
+    },
+  },
+};
+</script>
