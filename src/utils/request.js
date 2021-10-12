@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2021-10-11 20:04:53
  * @LastEditors: DongBingnan
- * @LastEditTime: 2021-10-11 20:31:53
+ * @LastEditTime: 2021-10-12 16:33:55
  * @Description: file content
  * @FilePath: \vue 项目\vue_app_test_20211011\src\utils\request.js
  */

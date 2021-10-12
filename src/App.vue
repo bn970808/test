@@ -2,40 +2,34 @@
  * @Author: DongBingnan
  * @Date: 2021-10-11 17:08:38
  * @LastEditors: DongBingnan
- * @LastEditTime: 2021-10-11 21:08:10
+ * @LastEditTime: 2021-10-12 17:46:59
  * @Description: file content
  * @FilePath: \vue 项目\vue_app_test_20211011\src\App.vue
 -->
 <template>
-  <div>
-    <div class="box" v-swiperight="handler"></div>
-    <van-button type="primary">主要按钮</van-button>
-    <van-button type="info">信息按钮</van-button>
-    <van-button type="default">默认按钮</van-button>
-    <van-button type="warning">警告按钮</van-button>
-    <van-button type="danger">危险按钮</van-button>
-    <p>
-      {{ time | dateFilter("-") }}
-    </p>
+  <div class="app">
+    <Tab></Tab>
+    <Home></Home>
+    <tab-bar></tab-bar>
   </div>
 </template>
-<style lang="sass" scoped>
-.box
-  width: 100px
-  height: 100px
-  background: red
-</style>
 <script>
+import Home from "Pages/home";
+import Tab from "Comp/Tab";
+import TabBar from "Comp/TabBar";
 export default {
-  data() {
-    return {
-      time: Date.now(),
-    };
-  },
-  methods: {
-    handler() {
-      console.log("11111");
-    },
+  name: "APP",
+  components: {
+    Tab,
+    TabBar,
+    Home,
   },
 };
 </script>
+<style lang='scss'>
+@import "Assets/stylesheets/reset";
+.app {
+  display: flex;
+  flex-direction: column;
+}
+</style>
