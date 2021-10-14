@@ -2,17 +2,23 @@
  * @Author: DongBingnan
  * @Date: 2021-10-12 17:02:47
  * @LastEditors: DongBingnan
- * @LastEditTime: 2021-10-12 18:15:41
+ * @LastEditTime: 2021-10-14 16:38:59
  * @Description: file content
  * @FilePath: \vue 项目\vue_app_test_20211011\src\components\TabBar.vue
 -->
 <template>
   <footer>
     <ul>
-      <li v-for="item in tabBars" :key="item.id">
+      <router-link
+        tag="li"
+        :to="item.path"
+        v-for="item in tabBars"
+        :key="item.id"
+        active-class="active"
+      >
         <van-icon :name="item.iconName"></van-icon>
         <span>{{ item.text }}</span>
-      </li>
+      </router-link>
     </ul>
   </footer>
 </template>
@@ -32,6 +38,9 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      &.active {
+        color: red;
+      }
       i {
         font-size: 22px;
         margin-bottom: 4px;
@@ -76,7 +85,7 @@ export default {
           id: 5,
           text: "我的",
           iconName: "contact",
-          path: "/mine",
+          path: "/user",
         },
       ],
     };
